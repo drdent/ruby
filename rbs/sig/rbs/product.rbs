@@ -1,0 +1,7 @@
+class Product
+  attr_reader base_price: Integer
+
+  def initialize: (Integer base_price) -> void
+
+  def price: (amount: Integer amount) -> Integer
+end

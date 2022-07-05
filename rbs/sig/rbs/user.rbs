@@ -1,0 +1,5 @@
+class User
+  attr_reader money: Integer
+
+  def initialize: (untyped money) -> void
+end

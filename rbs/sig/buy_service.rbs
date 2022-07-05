@@ -1,0 +1,3 @@
+class BuyService
+  def self.call: (User user, Product product, Integer amount) -> void
+end
