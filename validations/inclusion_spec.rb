@@ -3,8 +3,8 @@ require './inclusion'
 describe Inclusion do
   subject(:inclusion) {
     Inclusion.new(
-      state:                  state,
-      state_without_presence: state_without_presence,
+      state:                     state,
+      state_without_presence:    state_without_presence,
       state_without_allow_blank: state_without_allow_blank
     )
   }
@@ -23,6 +23,7 @@ describe Inclusion do
 
         it 'is invalid' do
           expect(inclusion).not_to be_valid
+          expect(inclusion.errors.size).to eq 1
         end
       end
 
@@ -31,6 +32,7 @@ describe Inclusion do
 
         it 'is invalid' do
           expect(inclusion).not_to be_valid
+          expect(inclusion.errors.size).to eq 1
         end
       end
 
@@ -39,6 +41,7 @@ describe Inclusion do
 
         it 'is invalid' do
           expect(inclusion).not_to be_valid
+          expect(inclusion.errors.size).to eq 1
         end
       end
     end
@@ -69,6 +72,7 @@ describe Inclusion do
 
         it 'is invalid' do
           expect(inclusion).not_to be_valid
+          expect(inclusion.errors.size).to eq 1
         end
       end
     end
@@ -83,6 +87,7 @@ describe Inclusion do
 
         it 'is invalid' do
           expect(inclusion).not_to be_valid
+          expect(inclusion.errors.size).to eq 2
         end
       end
 
@@ -91,6 +96,7 @@ describe Inclusion do
 
         it 'is invalid' do
           expect(inclusion).not_to be_valid
+          expect(inclusion.errors.size).to eq 2
         end
       end
 
@@ -99,6 +105,7 @@ describe Inclusion do
 
         it 'is invalid' do
           expect(inclusion).not_to be_valid
+          expect(inclusion.errors.size).to eq 1
         end
       end
     end
